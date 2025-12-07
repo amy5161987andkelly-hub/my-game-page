@@ -13,7 +13,6 @@
                 extend: {
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
-                        // 移除 'lishu' 字體設定，所有文字將使用 'sans' (黑體)
                     },
                     colors: {
                         'cosmic-dark': '#0a0a2a', // 深邃的宇宙藍黑
@@ -110,17 +109,22 @@
 </head>
 <body class="bg-cosmic-dark text-white font-sans min-h-screen flex items-center justify-center p-4">
 
-    <div class="w-full max-w-4xl text-center">
-        <!-- 標題與簡介 (保持在頂部) -->
-        <!-- 主標題：強制在「世界的」和「抽籤」之間斷行 -->
-        <h1 class="text-4xl sm:text-5xl font-extrabold mb-4 text-star-glow drop-shadow-lg tracking-wider">
-            未來世界的<br>抽籤
-        </h1>
-        
-        <!-- 副標題：新增 inline-block 和 text-left 讓兩行文字靠左對齊，並讓整體區塊居中 -->
-        <p class="text-gray-400 mb-12 text-lg inline-block text-left">
-            透過量子黑洞，抽取您未來的命運<br>卡片。
-        </p>
+    <!-- 外層容器：移除 text-center，改為 flex 居中所有內容 -->
+    <div class="w-full max-w-4xl flex flex-col items-center">
+        <!-- 標題與簡介區塊 -->
+        <div class="w-full text-center">
+            <!-- 主標題：強制在「世界的」和「抽籤」之間斷行，並保持居中 -->
+            <h1 class="text-4xl sm:text-5xl font-extrabold mb-4 text-star-glow drop-shadow-lg tracking-wider text-center">
+                未來世界的<br>抽籤
+            </h1>
+            
+            <!-- 修正副標題：移除 <br> 標籤，讓文字順排，由瀏覽器自動換行。
+                 並使用 max-w-sm mx-auto text-left 確保文字左對齊且區塊居中。
+            -->
+            <p class="text-gray-400 mb-12 text-lg max-w-sm mx-auto text-left">
+                透過量子黑洞，抽取您未來的命運卡片。
+            </p>
+        </div>
 
         <!-- 主要遊戲視圖容器，用於管理抽卡區和讀取區的顯示 -->
         <div id="gameViewContainer" class="flex flex-col items-center justify-center min-h-[50vh]">
