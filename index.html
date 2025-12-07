@@ -113,15 +113,13 @@
     <div class="w-full max-w-4xl flex flex-col items-center">
         <!-- 標題與簡介區塊 -->
         <div class="w-full text-center">
-            <!-- 主標題：強制在「世界的」和「抽籤」之間斷行，並保持居中 -->
+            <!-- 主標題：置中 (text-center) -->
             <h1 class="text-4xl sm:text-5xl font-extrabold mb-4 text-star-glow drop-shadow-lg tracking-wider text-center">
                 未來世界的<br>抽籤
             </h1>
             
-            <!-- 修正副標題：移除 <br> 標籤，讓文字順排，由瀏覽器自動換行。
-                 並使用 max-w-sm mx-auto text-left 確保文字左對齊且區塊居中。
-            -->
-            <p class="text-gray-400 mb-12 text-lg max-w-sm mx-auto text-left">
+            <!-- 副標題：置左 (text-left) 且順排（無 <br>），但整個區塊置中 (mx-auto) 且寬度適中 (max-w-md) -->
+            <p class="text-gray-400 mb-12 text-lg max-w-md mx-auto text-left">
                 透過量子黑洞，抽取您未來的命運卡片。
             </p>
         </div>
