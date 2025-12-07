@@ -109,17 +109,18 @@
 </head>
 <body class="bg-cosmic-dark text-white font-sans min-h-screen flex items-center justify-center p-4">
 
-    <!-- 外層容器：移除 text-center，改為 flex 居中所有內容 -->
+    <!-- 外層容器：確保所有內容整體居中 -->
     <div class="w-full max-w-4xl flex flex-col items-center">
         <!-- 標題與簡介區塊 -->
         <div class="w-full text-center">
-            <!-- 主標題：置中 (text-center) -->
+            
+            <!-- 主標題：單行，置中 (text-center)，確保在所有尺寸上都不會手動斷行 -->
             <h1 class="text-4xl sm:text-5xl font-extrabold mb-4 text-star-glow drop-shadow-lg tracking-wider text-center">
-                未來世界的<br>抽籤
+                未來世界的抽籤
             </h1>
             
-            <!-- 副標題：置左 (text-left) 且順排（無 <br>），但整個區塊置中 (mx-auto) 且寬度適中 (max-w-md) -->
-            <p class="text-gray-400 mb-12 text-lg max-w-md mx-auto text-left">
+            <!-- 副標題：置中 (text-center)，移除寬度限制，讓文字順排自然換行 -->
+            <p class="text-gray-400 mb-12 text-lg text-center">
                 透過量子黑洞，抽取您未來的命運卡片。
             </p>
         </div>
@@ -171,7 +172,7 @@
                 </h3>
 
                 <!-- 預留位置 2: 預言文字 -->
-                <!-- 修正: 移除 font-lishu，恢復使用 font-sans (黑體) -->
+                <!-- 文字置中 (text-center) -->
                 <div id="prophecyTextDisplay" class="bg-cosmic-dark/50 p-4 rounded-lg text-lg text-gray-300 shadow-inner w-full text-center animate-reveal border border-star-glow/10 whitespace-pre-wrap">
                     <!-- 預言文字佔位符 -->
                 </div>
